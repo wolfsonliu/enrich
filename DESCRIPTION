@@ -1,0 +1,14 @@
+Package: enrich
+Title: Gene list enrichment on KEGG pathway, GO term, Transcript Factor Targets
+    and so on.
+Description: 
+Version: 0.1
+Author: Zhiheng Liu <wolfsonliu@gmail.com>
+Maintainer: Zhiheng Liu <wolfsonliu@gmail.com>
+License: LGPL-3
+URL: 
+Imports:
+    memoise,
+    utils,
+    methods
+RoxygenNote: 5.0.1
