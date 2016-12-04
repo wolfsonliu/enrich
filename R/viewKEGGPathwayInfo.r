@@ -43,7 +43,7 @@ viewKEGGPathwayInfo <- function(pathway.id) {
             cat(" * ", sep = "")
             cat(switch(i%%3 + 1, "/", "\\", "-"), sep = "")
             cat(" * \r", sep = "")
-            result[[pathway.id[i]]] <- .fetchKEGGPathwayInfo(
+            result[[pathway.id[i]]] <- fetchPathwayInfo(
                 pathway.id[i]
             )
         }

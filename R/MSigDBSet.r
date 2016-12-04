@@ -257,8 +257,9 @@ setMethod(
                 as.data.frame(
                     lapply(
                         unname(unlist(strsplit(.Object@MEMBERS_MAPPING,"[|]"))),
-                        strsplit,
-                        split = ","
+                        function(x) {
+                            c(unlist(strsplit(x, ',')), '')[1:3]
+                        }
                     )
                 )
             ),

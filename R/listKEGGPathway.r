@@ -30,11 +30,11 @@
 #' @import memoise
 #' @export
 listKEGGPathway <- memoise(function(organism,
-                                             origin = FALSE) {
+                                    origin = FALSE) {
 ###{{{ Get pathway list for specific organism from KEGG database.
 
     list.url.prefix <- "http://rest.kegg.jp/list/pathway/"
-    organism.list   <- organismList()
+    organism.list   <- listKEGGOrganism()
     if (nchar(organism) == 3) {
         ## Check organism code
         if (organism %in% organism.list$Code) {
